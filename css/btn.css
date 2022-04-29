@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+}
+
+.container {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#click {
+  display: none;
+}
+
+#click:checked ~ .popup {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #017aff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.window {
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.title,
+.body {
+  padding: 20px;
+  border-bottom: 1px solid silver;
+}
+
+.bottom {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+}
+
+.title h1 {
+  font-size: 22px;
+}
+
+.bottom .close {
+  padding: 10px 20px;
+  background-color: #017aff;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.blackout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  opacity: 0.2;
+}
+
+.lock {
+  overflow: hidden;
+}
